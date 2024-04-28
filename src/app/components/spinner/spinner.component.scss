@@ -1,0 +1,59 @@
+.rpa-spinner,
+.rpa-spinner div {
+  box-sizing: border-box;
+}
+.rpa-spinner {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.rpa-spinner div {
+  position: absolute;
+  top: 33.33333px;
+  width: 13.33333px;
+  height: 13.33333px;
+  border-radius: 50%;
+  background: currentColor;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.rpa-spinner div:nth-child(1) {
+  left: 8px;
+  animation: rpa-spinner1 0.6s infinite;
+}
+.rpa-spinner div:nth-child(2) {
+  left: 8px;
+  animation: rpa-spinner2 0.6s infinite;
+}
+.rpa-spinner div:nth-child(3) {
+  left: 32px;
+  animation: rpa-spinner2 0.6s infinite;
+}
+.rpa-spinner div:nth-child(4) {
+  left: 56px;
+  animation: rpa-spinner3 0.6s infinite;
+}
+@keyframes rpa-spinner1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rpa-spinner3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes rpa-spinner2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
